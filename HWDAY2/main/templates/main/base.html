@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 HW</title>
+    <!-- Load shared CSS -->
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact' %}">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Load shared JS -->
+    <script src="{% static 'main/script.js' %}"></script>
+</body>
+</html>
