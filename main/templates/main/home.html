@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home - MyDjangoSite{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Welcome to My Page</h1>
+        <p class="hero-subtitle">A simple Django-powered website</p>
+        <button id="greetBtn" class="btn-primary" onclick="showMessage()">
+            ✨ Click Me!
+        </button>
+        <div id="messageBox" class="message-box hidden"></div>
+    </div>
+</div>
+{% endblock %}

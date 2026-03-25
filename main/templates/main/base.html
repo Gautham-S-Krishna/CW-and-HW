@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">🌐 MyDjangoSite</div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about/" class="nav-link">About</a>
+        </div>
+    </nav>
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 MyDjangoSite. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'main/script.js' %}"></script>
+</body>
+</html>
